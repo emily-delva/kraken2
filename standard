@@ -1,0 +1,4 @@
+./install_kraken2.sh $KRAKEN2_DIR
+cp $KRAKEN2_DIR/kraken2{,-build, -inspect} $HOME/bin
+kraken2-build --standard --threads 24 --db $DBNAME
+kraken2 --paired --classified-out --db $DBNAME seqs.fa
